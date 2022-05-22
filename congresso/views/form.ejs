@@ -1,0 +1,21 @@
+<form action="/gerar" method="post" class="form-ra d-flex align-items-center flex-column justify-content-around">
+
+    <div class="mb-3 container-fluid container-form">
+        <label for="nome" class="form-label">Nome:</label>
+        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do aluno..." required>
+    </div>
+
+    <div class="mb-3 container-fluid container-form">
+        <label for="ra" class="form-label">RA do aluno:</label>
+        <input type="text" class="form-control" id="ra" name="ra" placeholder="RA do aluno..." required>
+    </div>
+        
+    <div class="d-grid gap-2 col-3 mx-auto">
+        <button class="btn btn-success btn-code" type="submit">Gerar QRCode</button>
+    </div>
+    
+</form>
+
+<div class="d-grid gap-2 col-3 mx-auto">
+    <a href="/ler" class="btn btn-success btn-code">Ler QRCode</a>
+</div>
