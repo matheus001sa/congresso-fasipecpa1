@@ -1,0 +1,24 @@
+<form action="/gerar" method="post" class="form-ra d-flex align-items-center flex-column justify-content-around">
+
+    <div class="mb-3 container-fluid container-form shadow-lg p-3 mb-5 bg-body rounded-4">
+        <input type="text" class="form-control" name="ra" placeholder="RA do aluno..." required>
+    </div>
+        
+    <div class="d-grid gap-2 col-3 mx-auto">
+        <button class="btn btn-success btn-code" type="submit">Gerar QRCode</button>
+    </div>
+    
+</form>
+
+<div class="d-grid gap-2 col-3 mx-auto">
+
+    <% const n1 = new Date(); %>
+    <% const n2 = n1.getHours(); %>
+    <% const n3 = n1.getMinutes(); %>
+    <% if (n2 > 18 || n3 > 30) { %>
+        <a href="/erro" class="btn btn-success btn-code">Ler QRCode</a>
+    <% } else { %>
+        <a href="/ler" class="btn btn-success btn-code">Ler QRCode</a>
+    <% } %>
+    
+</div>
